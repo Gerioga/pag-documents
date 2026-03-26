@@ -10,7 +10,8 @@ export async function extractText(
 
   if (lower.endsWith(".pdf")) {
     const data = await pdfParse(buffer);
-    return data.text;
+    // Strip null bytes that break Postgres UTF-8
+    return data.text.replace(/\0/g, "");
   }
 
   if (lower.endsWith(".docx")) {
