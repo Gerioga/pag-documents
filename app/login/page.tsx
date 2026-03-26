@@ -29,16 +29,48 @@ export default function LoginPage() {
   return (
     <main
       style={{
-        fontFamily: "system-ui",
-        maxWidth: 400,
-        margin: "120px auto",
+        minHeight: "100vh",
+        background: "var(--bg)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
         padding: "0 20px",
-        textAlign: "center",
       }}
     >
-      <h1 style={{ fontSize: 24, marginBottom: 8 }}>PAG Documents</h1>
-      <p style={{ color: "#666", marginBottom: 32 }}>Enter password to continue</p>
-      <form onSubmit={handleSubmit}>
+      <div style={{ textAlign: "center", marginBottom: 40 }}>
+        <img
+          src="/pim-pam-logo.png"
+          alt="PIM-PAM"
+          style={{ height: 48, marginBottom: 24 }}
+        />
+        <h1
+          style={{
+            fontFamily: "var(--font-heading)",
+            fontSize: 24,
+            fontWeight: 700,
+            color: "#ffffff",
+            marginBottom: 4,
+          }}
+        >
+          PAG Document AI
+        </h1>
+        <p style={{ color: "var(--muted)", fontSize: 14 }}>
+          Serbia — Public Asset Governance
+        </p>
+      </div>
+
+      <form
+        onSubmit={handleSubmit}
+        style={{
+          width: "100%",
+          maxWidth: 380,
+          background: "rgba(255,255,255,0.04)",
+          border: "1px solid rgba(255,255,255,0.08)",
+          borderRadius: "var(--radius)",
+          padding: 32,
+        }}
+      >
         <input
           type="password"
           value={password}
@@ -47,10 +79,13 @@ export default function LoginPage() {
           style={{
             width: "100%",
             padding: "12px 16px",
-            fontSize: 16,
-            border: "1px solid #ccc",
+            fontSize: 15,
+            border: "1px solid rgba(255,255,255,0.12)",
             borderRadius: 6,
             boxSizing: "border-box",
+            background: "rgba(255,255,255,0.06)",
+            color: "#ffffff",
+            outline: "none",
           }}
           autoFocus
         />
@@ -59,18 +94,22 @@ export default function LoginPage() {
           style={{
             width: "100%",
             padding: "12px 16px",
-            fontSize: 16,
+            fontSize: 15,
+            fontWeight: 600,
             marginTop: 12,
-            backgroundColor: "#333",
+            backgroundColor: "var(--accent)",
             color: "#fff",
             border: "none",
             borderRadius: 6,
             cursor: "pointer",
+            transition: "background 0.15s ease",
           }}
+          onMouseOver={(e) => (e.currentTarget.style.background = "var(--accent-hover)")}
+          onMouseOut={(e) => (e.currentTarget.style.background = "var(--accent)")}
         >
           Enter
         </button>
-        {error && <p style={{ color: "red", marginTop: 12 }}>{error}</p>}
+        {error && <p style={{ color: "var(--danger)", marginTop: 12, textAlign: "center", fontSize: 14 }}>{error}</p>}
       </form>
     </main>
   );

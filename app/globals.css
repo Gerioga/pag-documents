@@ -1,14 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
 :root {
-  --bg: #ffffff;
-  --fg: #111;
-  --muted: #666;
-  --border: #e0e0e0;
-  --accent: #2563eb;
-  --accent-light: #eff6ff;
+  --bg: #1c2027;
+  --bg-card: #ffffff;
+  --fg: #f0f2f7;
+  --fg-dark: #1c2027;
+  --muted: #99a2af;
+  --border: #BCC0CC;
+  --accent: #4472c4;
+  --accent-hover: #374696;
+  --accent-light: rgba(68, 114, 196, 0.1);
   --danger: #dc2626;
   --success: #16a34a;
-  --radius: 6px;
-  --font: system-ui, -apple-system, sans-serif;
+  --radius: 10px;
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Fira Sans', system-ui, -apple-system, sans-serif;
   --mono: ui-monospace, "SF Mono", monospace;
 }
 
@@ -22,7 +28,8 @@ body {
   font-family: var(--font);
   color: var(--fg);
   background: var(--bg);
-  line-height: 1.5;
+  line-height: 1.6;
+  font-size: 15px;
 }
 
 button {
