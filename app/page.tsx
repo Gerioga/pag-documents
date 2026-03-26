@@ -44,7 +44,7 @@ export default function Home() {
             <img
               src="/pim-pam-logo.png"
               alt="PIM-PAM"
-              style={{ height: 40 }}
+              style={{ height: 40, background: "#ffffff", borderRadius: 4, padding: 4 }}
             />
             <div style={{ height: 28, width: 1, background: "rgba(255,255,255,0.15)" }} />
             <div>

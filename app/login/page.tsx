@@ -42,7 +42,7 @@ export default function LoginPage() {
         <img
           src="/pim-pam-logo.png"
           alt="PIM-PAM"
-          style={{ height: 48, marginBottom: 24 }}
+          style={{ height: 48, marginBottom: 24, background: "#ffffff", borderRadius: 4, padding: 6 }}
         />
         <h1
           style={{
