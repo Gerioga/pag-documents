@@ -135,21 +135,26 @@ export default function Home() {
               About this tool
             </h2>
             <p style={{ fontSize: 15, lineHeight: 1.8, color: "#444" }}>
-              The PAG Document AI is an analytical platform designed to help policy makers
-              and government officials navigate Serbia's public asset governance legal framework.
-              It uses AI to search, cross-reference, and analyze the full corpus of laws, decrees,
-              and regulations governing public property — identifying regulatory gaps, overlaps,
-              and areas where the legal framework falls short of EU standards. Similar to the{" "}
+              The PAG Document AI is an analytical platform designed to help policy makers and
+              government officials navigate Serbia's public asset governance legal framework.
+              It uses LLMs to search, cross-reference, and analyze the full corpus of laws,
+              decrees, and regulations governing public property — identifying regulatory gaps,
+              overlaps, and areas where the legal framework falls short of EU standards.
+              It is modeled on the base of the{" "}
               <a
                 href="https://pim-pam.net/web-applications/#ai"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "var(--accent)", textDecoration: "none", fontWeight: 500 }}
               >
-                PIM-PAM public investment management tools
+                PIM AI Tool
               </a>
-              , this platform translates complex legislation into actionable policy insights
+              , and aims to translate complex legislation into actionable policy insights
               through structured analysis scripts and an interactive AI chat assistant.
+            </p>
+            <p style={{ fontSize: 15, lineHeight: 1.8, color: "#444", marginTop: 16 }}>
+              The Tool complements the Public Asset Governance Functional Assessment (PAG-FA)
+              by giving access to the main regulatory texts structuring asset governance in Serbia.
             </p>
           </div>
         )}
